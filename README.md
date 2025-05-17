@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+# 🐍 Snake Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-18.2.0-%2361DAFB?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-%233178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-4.4.0-%646CFF?logo=vite)](https://vitejs.dev/)
+[![CSS3](https://img.shields.io/badge/CSS3-%231572B6?logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
-Currently, two official plugins are available:
+Un classico gioco Snake sviluppato con React, TypeScript e Vite, con supporto per dispositivi desktop e mobile.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Game Screenshot](https://via.placeholder.com/400x300/333/fff?text=Snake+Game+Screenshot)
 
-## Expanding the ESLint configuration
+## 🚀 Funzionalità
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🎮 Controlli da tastiera e touch screen
+- ⏯️ Sistema di pausa
+- 🏆 Registrazione del punteggio massimo
+- 📱 Design responsive per mobile
+- ⚡ Animazioni fluide
+- 🔄 Logica di gioco ottimizzata con React hooks
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Tecnologie utilizzate
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React 18** - Libreria JavaScript per la costruzione dell'interfaccia utente
+- **TypeScript** - Aggiunge tipi statici a JavaScript
+- **Vite** - Tooling frontend veloce e moderno
+- **CSS3** - Stilizzazione del gioco
+- **Hooks** - useState, useEffect, useCallback per la gestione dello stato
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📋 Come funziona
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Il gioco implementa la classica meccanica del Snake:
+
+1. Il serpente si muove in una griglia 20x20
+2. Devi raccogliere il cibo per far crescere il serpente
+3. Evita di colpire i bordi o il tuo stesso corpo
+4. La velocità aumenta progressivamente
+5. Ogni cibo raccolto vale 10 punti
+
+### Controlli:
+
+- **Desktop**: Freccie direzionali (↑ ↓ ← →) per muoverti, barra spaziatrice per pausa
+- **Mobile**: Pulsanti a schermo o gesti touch (swipe)

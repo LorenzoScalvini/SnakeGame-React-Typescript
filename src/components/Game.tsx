@@ -314,4 +314,4 @@ const Game: React.FC = () => {
 };
 
 // Esporta il componente
-export default Game;
+export default Game; 
